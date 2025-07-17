@@ -22,6 +22,7 @@ const StudentPendingTasks = () => {
   const [file, setFile] = useState(null);
   const [uploading, setUploading] = useState(false);
   const [uploadError, setUploadError] = useState("");
+  const BASE_URL=import.meta.env.VITE_API_BASE_URL;
 
   const fetchSubmissions = async () => {
     try {
@@ -155,7 +156,7 @@ const StudentPendingTasks = () => {
   <UploadCloud className="w-4 h-4" />
   File:{" "}
 <a
-  href={`http://localhost:8000${submission.file}`}
+  href={`${BASE_URL}${submission.file}`}
   target="_blank"
   rel="noopener noreferrer"
   className="text-blue-600 underline hover:text-blue-800"

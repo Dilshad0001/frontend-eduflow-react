@@ -10,6 +10,7 @@ function StudentLessonDetail() {
   const [lesson, setLesson] = useState(null);
   const [loading, setLoading] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
+  const BASE_URL=import.meta.env.VITE_API_BASE_URL;
 
   const DUMMY_LESSON = {
     lesson_name: "Introduction to Web Development",
@@ -92,7 +93,7 @@ function StudentLessonDetail() {
                     onPlay={handleVideoPlay}
                     onPause={handleVideoPause}
                   >
-                    <source src={`http://localhost:8000${lesson.video}`} type="video/mp4" />
+                    <source src={`${BASE_URL}${lesson.video}`} type="video/mp4" />
                     Your browser does not support the video tag.
                   </video>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
