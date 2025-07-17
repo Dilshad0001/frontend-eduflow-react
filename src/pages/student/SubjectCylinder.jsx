@@ -90,7 +90,7 @@ const SubjectCylinder = () => {
 
     return (
         <div
-            className={`rounded-xl p-6 shadow-sm relative overflow-hidden border ${
+            className={`rounded-2xl p-6 shadow-sm relative overflow-hidden border ${
                 isDarkMode ? 'bg-gray-900 border-gray-700' : 'bg-white border-white'
             }`}
         >
@@ -138,7 +138,7 @@ const SubjectCylinder = () => {
                         aria-label="Next Subject"
                     >
                         <svg
-                            className="w-6 h-6"
+                            className="w-6 h-6 rounded-4xl"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"

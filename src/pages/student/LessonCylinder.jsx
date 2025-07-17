@@ -84,7 +84,7 @@ const LessonCylinder = ({ subjectId, subjectName }) => {
 
     return (
         <div
-            className={`rounded-full p-6 shadow-sm relative overflow-hidden border-none ${
+            className={` p-6 shadow-sm rounded-2xl relative overflow-hidden border-none ${
                 isDarkMode ? 'bg-gray-900' : 'bg-white'
             }`}
         >
@@ -105,14 +105,14 @@ const LessonCylinder = ({ subjectId, subjectName }) => {
                     Loading lessons...
                 </p>
             ) : courses.length > 0 ? (
-                <div className="relative flex items-center justify-center h-50 perspective-1000">
+                <div className="relative flex items-center justify-center h-50 perspective-1000 rounded-full">
                     <button
                         onClick={() => rotateCylinder('prev')}
                         className="absolute left-0 z-10 p-2 bg-blue-800 text-white rounded-full opacity-70 hover:opacity-100 transition-opacity transform -translate-x-1/2 focus:outline-none"
                         aria-label="Previous Lesson"
                     >
                         <svg
-                            className="w-6 h-6"
+                            className="w-6 h-6 rounded-4xl"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"

@@ -194,14 +194,25 @@ const StudentHome = () => {
                 { value: '78%', label: 'Avg Progress' },
                 { value: '42', label: 'Hours Learned' },
               ].map((item, idx) => (
+                // <div
+                //   key={idx}
+                //   className={`p-4 rounded-md text-center ${
+                //     isDarkMode
+                //       ? 'bg-slate-700 border border-slate-600'
+                //       : 'bg-gray-50 border border-gray-200'
+                //   }`}
+                // >
                 <div
-                  key={idx}
-                  className={`p-4 rounded-md text-center ${
-                    isDarkMode
-                      ? 'bg-slate-700 border border-slate-600'
-                      : 'bg-gray-50 border border-gray-200'
-                  }`}
-                >
+  key={idx}
+  className={`p-4 rounded-md text-center ${
+    idx === 0 ? 'hidden md:block' : ''
+  } ${
+    isDarkMode
+      ? 'bg-slate-700 border border-slate-600'
+      : 'bg-gray-50 border border-gray-200'
+  }`}
+>
+
                   <div className="text-2xl font-bold text-blue-500">
                     {item.value}
                   </div>
