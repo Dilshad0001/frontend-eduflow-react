@@ -14,9 +14,7 @@ const LessonDetailPage = () => {
   useEffect(() => {
     const fetchLesson = async () => {
       try {
-        const response = await axiosInstance.get(`adminuser/lesson/?lessonId=${lessonId}`, {
-        
-        });
+        const response = await axiosInstance.get(`adminuser/lesson/?lessonId=${lessonId}`);
         setLesson(response.data);
       } catch (error) {
         console.error("Error fetching lesson:", error);
