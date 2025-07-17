@@ -460,9 +460,13 @@ const StudentNavbar = () => {
 
           {/* Mobile Navigation */}
           {isMobileMenuOpen && (
-            <div className={`lg:hidden mobile-menu transform transition-all duration-300 ease-in-out ${
-              isMobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0'
-            }`}>
+            // <div className={`lg:hidden mobile-menu transform transition-all duration-300 ease-in-out ${
+            //   isMobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0'
+            // }`}>
+            <div className={`lg:hidden mobile-menu bg-white dark:bg-slate-900 transform transition-all duration-300 ease-in-out ${
+  isMobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0'
+}`}>
+
               {/* Mobile Search */}
               <div className="px-4 py-3 border-t border-slate-200/10">
                 <div className="relative">
@@ -544,3 +548,4 @@ const StudentNavbar = () => {
 export default StudentNavbar;
 
 
+// Search
