@@ -41,11 +41,11 @@ function StudentProfile() {
           course: res.data.course || ""
         });
       } catch (err) {
-        if (err.response && err.response.status === 204) {
+        if (err.response && err.response.status === 204 || err.response.status === 404) {
           setProfile(null);
           setIsEdit(true)
         } else {
-          setError("Failed to load profile data");
+          setError("Failed to load student profile");
         }
       } finally {
         setLoading(false);
