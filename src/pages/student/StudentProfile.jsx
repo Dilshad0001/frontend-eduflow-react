@@ -43,6 +43,7 @@ function StudentProfile() {
       } catch (err) {
         if (err.response && err.response.status === 204) {
           setProfile(null);
+          setIsEdit(true)
         } else {
           setError("Failed to load profile");
         }
