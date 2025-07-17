@@ -19,6 +19,7 @@ const AdminLessonList = ({ subjectId, subjectName }) => {
   const [savingLesson, setSavingLesson] = useState(false);
   const [isAddingLesson, setIsAddingLesson] = useState(false);
   const navigate=useNavigate()
+  const BASE_URL=import.meta.env.VITE_API_BASE_URL;
 
   const fetchLessons = async () => {
     setLoading(true);
@@ -223,7 +224,7 @@ const AdminLessonList = ({ subjectId, subjectName }) => {
   controls
   className="w-68 h-18 object-cover rounded shadow"
 >
-  <source src={`http://localhost:8000${lesson.video}`} type="video/mp4" />
+  <source src={`${BASE_URL}${lesson.video}`} type="video/mp4" />
   Your browser does not support the video tag.
 </video>
                       ) : (
