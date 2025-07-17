@@ -45,7 +45,7 @@ function StudentProfile() {
           setProfile(null);
           setIsEdit(true)
         } else {
-          setError("Failed to load profile");
+          setError("Failed to load profile data");
         }
       } finally {
         setLoading(false);
