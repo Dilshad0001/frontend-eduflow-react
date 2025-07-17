@@ -27,9 +27,11 @@ function StudentProfile() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await axiosInstance.get("/student/profile/");
-        const res_course = await axiosInstance.get("/student/course/");
+
         const res_user = await axiosInstance.get("/account/self/");
+        const res_course = await axiosInstance.get("/student/course/");
+
+        const res = await axiosInstance.get("/student/profile/");
 
         setCourses(res_course.data);
         setUser(res_user.data);
