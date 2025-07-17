@@ -19,6 +19,8 @@ function StudentLessonDetail() {
       "This lesson introduces you to the basics of web development. You will learn how HTML forms the structure of web pages and how to use tags effectively.",
   };
 
+
+  
   useEffect(() => {
     const fetchLesson = async () => {
       try {
