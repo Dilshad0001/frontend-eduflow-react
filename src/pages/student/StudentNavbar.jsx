@@ -463,7 +463,7 @@ const StudentNavbar = () => {
             // <div className={`lg:hidden mobile-menu transform transition-all duration-300 ease-in-out ${
             //   isMobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0'
             // }`}>
-            <div className={`lg:hidden mobile-menu bg-white dark:bg-slate-900 transform transition-all duration-300 ease-in-out ${
+<div className={`lg:hidden mobile-menu bg-white transform transition-all duration-300 ease-in-out ${
   isMobileMenuOpen ? 'translate-y-0 opacity-100' : '-translate-y-2 opacity-0'
 }`}>
 
