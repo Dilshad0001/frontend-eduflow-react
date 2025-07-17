@@ -138,6 +138,7 @@ const SubjectCylinder = () => {
                         aria-label="Next Subject"
                     >
                
+               
                         <svg
                             className="w-6 h-6 rounded-4xl"
                             fill="none"
