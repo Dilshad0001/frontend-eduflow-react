@@ -29,12 +29,14 @@ function StudentProfile() {
       try {
 
         const res_user = await axiosInstance.get("/account/self/");
+        setUser(res_user.data);
+
         const res_course = await axiosInstance.get("/student/course/");
+        setCourses(res_course.data);
+
 
         const res = await axiosInstance.get("/student/profile/");
 
-        setCourses(res_course.data);
-        setUser(res_user.data);
 
         setProfile(res.data);
         setFormData({
