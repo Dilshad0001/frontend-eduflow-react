@@ -26,6 +26,9 @@ const StudentHome = () => {
   const location = useLocation();
   const { isDarkMode } = useDarkMode();
 
+
+
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -150,9 +153,6 @@ const StudentHome = () => {
     { id: 2, icon: '%', text: 'Quiz Score: 95%', time: 'Yesterday' },
     { id: 3, icon: '💬', text: 'New forum reply', time: '2 days ago' }
   ];
-
-
-
 
 
 

@@ -17,6 +17,7 @@ import LessonDetailPage from './pages/admin/LessonDetailPage'
 import AdminAssignmentList from './pages/admin/AdminAssignmentList'
 import SubmissionDetail from './pages/admin/SubmissionDetail'
 import AdminDashboard from './pages/admin/AdminDashboard'
+import Lanndingpage from './pages/student/Lanndingpage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,9 +26,10 @@ function App() {
     <BrowserRouter>
       <Routes >
  
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<Lanndingpage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        
 
 
         <Route path='/student' element={<StudentLayout/>}>
