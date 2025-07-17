@@ -137,6 +137,7 @@ const SubjectCylinder = () => {
                         className="absolute right-0 z-10 p-2 bg-blue-800 text-white rounded-full opacity-70 hover:opacity-100 transition-opacity transform translate-x-1/2 focus:outline-none"
                         aria-label="Next Subject"
                     >
+               
                         <svg
                             className="w-6 h-6 rounded-4xl"
                             fill="none"
