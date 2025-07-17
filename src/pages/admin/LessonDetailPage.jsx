@@ -10,6 +10,7 @@ const LessonDetailPage = () => {
   const [lesson, setLesson] = useState(null);
   const [loading, setLoading] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
+  const BASE_URL=import.meta.env.VITE_API_BASE_URL;
 
   useEffect(() => {
     const fetchLesson = async () => {
@@ -70,7 +71,7 @@ const LessonDetailPage = () => {
               onPlay={handleVideoPlay}
               onPause={handleVideoPause}
             >
-              <source src={`http://localhost:8000${lesson.video}`} type="video/mp4" />
+              <source src={`${BASE_URL}${lesson.video}`} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <div className="absolute top-2 right-2 text-xs bg-white/80 px-2 py-1 rounded shadow">
