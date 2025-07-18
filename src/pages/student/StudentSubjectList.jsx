@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Search, Grid, List, BookOpen, ChevronRight } from "lucide-react";
 import axiosInstance from "../../AxioInstance";
 import StudentLessonList from "./StudentLessonList";

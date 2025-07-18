@@ -75,7 +75,7 @@ const SubjectCylinder = () => {
     };
 
     const handleCourseClick = (subjectId) => {
-        navigate(`/student/subject/${subjectId}`);
+        navigate(`/student/subjects`);
     };
 
     const getProgressColor = (progress) => {

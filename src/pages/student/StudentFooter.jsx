@@ -199,7 +199,6 @@
 // };
 
 // export default StudentFooter;
-
 import {
   Mail, Phone, MapPin, BookOpen, Users, Award, Globe,
   Facebook, Twitter, Instagram, Linkedin, Youtube,
@@ -211,7 +210,7 @@ const StudentFooter = () => {
 
   return (
     <>
-      {/* Custom style for <550px layout fix */}
+      {/* Responsive style for Support and Quick Links in same row above 750px */}
       <style>
         {`
           @media (max-width: 580px) {
@@ -219,6 +218,13 @@ const StudentFooter = () => {
               display: grid;
               grid-template-columns: 1fr 1fr;
               gap: 1rem;
+            }
+          }
+
+          @media (min-width: 750px) {
+            .quick-support-wrapper {
+              display: flex;
+              gap: 2rem;
             }
           }
         `}
@@ -263,8 +269,8 @@ const StudentFooter = () => {
               </div>
             </div>
 
-            {/* Quick Links & Support: grouped for <550px layout */}
-            <div className="footer-small-cols lg:block">
+            {/* Quick Links & Support side-by-side at ≥750px */}
+            <div className="quick-support-wrapper footer-small-cols lg:block">
               {/* Quick Links */}
               <div className="space-y-4">
                 <h4 className={`text-lg font-semibold border-b pb-2 ${
