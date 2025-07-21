@@ -2,9 +2,10 @@
 
 
 import { useState } from 'react';
-import axios from 'axios';
+// import axios, { Axios } from 'axios';
 import { useNavigate } from 'react-router-dom';
 import axiosInstance from '../../AxioInstance';
+import axios from 'axios';
 
 const Login = () => {
   const [form, setForm] = useState({ email: '', password: '' });
@@ -12,17 +13,17 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
+  const BASE_URL = import.meta.env.VITE_API_BASE_URL;
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     setIsLoading(true);
 
     try {
-      const res = await axiosInstance.post('account/login/', form);
+      const res = await axios.post(`${BASE_URL}/account/login/`, form);
       localStorage.setItem('access_token', res.data.access_token);
       localStorage.setItem('refresh_token', res.data.refresh_token);
       
@@ -39,6 +40,8 @@ const Login = () => {
       }
 
     } catch (err) {
+      console.log(err);
+      
       const message =
         typeof err.response?.data === 'string'
           ? err.response.data

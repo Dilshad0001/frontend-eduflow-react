@@ -2,15 +2,17 @@
 
 
 import { useState } from 'react';
-import axios from 'axios';
+// import axios, { Axios } from 'axios';
 import { useNavigate } from 'react-router-dom';
 import axiosInstance from '../../AxioInstance';
+import axios from 'axios';
 
 const Register = () => {
   const [form, setForm] = useState({ email: '', password: '' });
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
+  const BASE_URL = import.meta.env.VITE_API_BASE_URL;
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -21,7 +23,7 @@ const Register = () => {
     setIsLoading(true);
 
     try {
-      await axiosInstance.post('account/register/', form);
+      await axios.post(`${BASE_URL}/account/register/`, form);
       navigate('/');
     } catch (err) {
       setError(err.response?.data?.email || 'Registration failed');
